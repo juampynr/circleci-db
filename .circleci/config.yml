@@ -3,9 +3,19 @@ jobs:
   build:
     docker:
       - image: ubuntu:18.04
+      - image: mariadb:10.4
+        environment:
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_DATABASE: world
 
     steps:
       - checkout
 
       - run:
-          command: echo 'hi!'
+          command: |
+            apt-get update
+            apt-get install wget
+            wget http://downloads.mysql.com/docs/world.sql.gz
+
+
+
