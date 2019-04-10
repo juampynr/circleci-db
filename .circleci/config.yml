@@ -14,8 +14,10 @@ jobs:
       - run:
           command: |
             apt-get update
-            apt-get install wget
+            apt-get install --yes wget mysql-client
             wget http://downloads.mysql.com/docs/world.sql.gz
+            gunzip world.sql.gz
+            mysql -uroot -proot -h127.0.0.1 world < world.sql
 
 
 
