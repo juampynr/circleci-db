@@ -3,25 +3,18 @@ jobs:
   build:
     docker:
       - image: ubuntu:18.04
-      - image: mariadb:10.4
-        environment:
-          MYSQL_ROOT_PASSWORD: root
-          MYSQL_DATABASE: wikimedia_images
-
+      - image: juampynr/circleci-db:latest
     steps:
       - checkout
-
       - run:
           name: Install dependencies
           command: |
             apt-get update
-            apt-get install --yes wget mysql-client
+            apt-get install --yes mysql-client
       - run:
-          name: Download and install database
+          name: Enjoy database
           command: |
-            wget https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-image.sql.gz
-            gunzip enwiki-latest-image.sql.gz
-            mysql -uroot -proot -h127.0.0.1 wikimedia_images < enwiki-latest-image.sql
+            mysql -uroot -proot -h127.0.0.1 wikimedia_images -e "select count(*) from image;"
 
 
 
