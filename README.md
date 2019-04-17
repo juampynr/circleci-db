@@ -1,10 +1,15 @@
 # Sample on providing CircleCI with a Docker image with a database in it
 
+Find out the story behind this repository at [this Lullabot article](https://www.lullabot.com/articles/rocket-ship-fast-jobs-circleci-preinstalling-database).
+
 This repository contains a CircleCI configuration file that pulls
 a custom MariaDB image that has a database installed in it.
 
-It also has a Dockerfile that downloads a sample database
-and installs it in a MariaDB image, following what
-https://github.com/lindycoder/prepopulated-mysql-container-example does.
-It is hosted at
-https://cloud.docker.com/u/juampynr/repository/docker/juampynr/circleci-db.
+The custom image used by CircleCI is built at Docker Hub by the
+Dockerfile located in this repository.
+
+Links:
+
+* [Lullabot article](https://www.lullabot.com/articles/rocket-ship-fast-jobs-circleci-preinstalling-database)
+* Based on https://github.com/lindycoder/prepopulated-mysql-container-example.
+* Docker hub repository that [hosts the custom image](https://cloud.docker.com/u/juampynr/repository/docker/juampynr/circleci-db).
