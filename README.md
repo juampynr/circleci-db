@@ -1,4 +1,4 @@
-# Sample on providing CircleCI with a Docker image with a database in it
+# Custom Docker image that has a MariaDB in it
 
 Find out the story behind this repository at [this Lullabot article](https://www.lullabot.com/articles/rocket-ship-fast-jobs-circleci-preinstalling-database).
 
