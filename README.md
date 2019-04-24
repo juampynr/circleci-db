@@ -12,4 +12,4 @@ Links:
 
 * [Lullabot article](https://www.lullabot.com/articles/rocket-ship-fast-jobs-circleci-preinstalling-database)
 * Based on https://github.com/lindycoder/prepopulated-mysql-container-example.
-* Docker hub repository that [hosts the custom image](https://cloud.docker.com/u/juampynr/repository/docker/juampynr/circleci-db).
+* Docker hub repository that [hosts the custom image](https://hub.docker.com/r/juampynr/circleci-db).
